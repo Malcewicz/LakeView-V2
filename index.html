@@ -43,6 +43,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    <script
+      src="https://kit.fontawesome.com/02bee5bd99.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </head>
   <body>
@@ -59,11 +63,37 @@
 
     <!-- Navbar -->
     <nav>
-      <span id="logo">
-        <a href="#">LakeView Przewięź</a>
-      </span>
-      <span class="material-icons md-28">menu</span>
+      <div id="nav">
+        <span id="logo">
+          <a href="#">LakeView Przewięź</a>
+        </span>
+        <span
+          aria-controls="menu"
+          aria-expanded="false"
+          onclick="toggleMenu()"
+          class="material-icons md-28"
+          id="menu-toggle"
+          >menu</span
+        >
+      </div>
     </nav>
+    <div id="menu">
+      <span>
+        <a href="#lokalizacja">Lokalizacja</a>
+      </span>
+      <span>
+        <a href="#apartamenty">Apartamenty i domek</a>
+      </span>
+      <span>
+        <a href="#oferta">Oferta</a>
+      </span>
+      <span>
+        <a href="#atrakcje">Atrakcje</a>
+      </span>
+      <span>
+        <a href="#kontakt">Kontakt</a>
+      </span>
+    </div>
 
     <!-- Header -->
     <header>
@@ -160,10 +190,10 @@
             alt="Zdjęcie domku apartamentów z zewnątrz"
           />
           <button class="button button-left" onclick="plusDivs(-1)">
-            &#10094;
+            <i class="fa-solid fa-angle-left"></i>
           </button>
           <button class="button button-right" onclick="plusDivs(1)">
-            &#10095;
+            <i class="fa-solid fa-angle-right"></i>
           </button>
           <h3>Apartamenty</h3>
           <p>
@@ -200,8 +230,12 @@
             data-src="img/salon_domek1.webp"
             alt="Zdjęcie salonu w domku"
           />
-          <button class="button-left" onclick="plusDivs2(-1)">&#10094;</button>
-          <button class="button-right" onclick="plusDivs2(1)">&#10095;</button>
+          <button class="button-left" onclick="plusDivs2(-1)">
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+          <button class="button-right" onclick="plusDivs2(1)">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
           <h3>Domek</h3>
           <p>
             Domek jest piętrowy z dużym tarasem. Na parterze do dyspozycji jest
@@ -248,10 +282,10 @@
             alt="Zdjęcie brzegu"
           />
           <button class="button button-left" onclick="plusDivs3(-1)">
-            &#10094;
+            <i class="fa-solid fa-angle-left"></i>
           </button>
           <button class="button button-right" onclick="plusDivs3(1)">
-            &#10095;
+            <i class="fa-solid fa-angle-right"></i>
           </button>
           <h3 class="smaller">Nasze atrakcje</h3>
           <p>
@@ -442,21 +476,24 @@
           </p>
         </div>
         <div class="buttons">
-          <button
+          <a
             href="https://www.google.com/maps/d/u/0/viewer?mid=16bSANJLNWkomEgh1Ccs2jLo99bw&ll=53.87920241883796%2C23.001241153124393&z=12"
             target="_blank"
+            class="button"
+            ><button>Szlaki rowerowe</button></a
           >
-            Szlaki rowerowe
-          </button>
-          <button href="https://goo.gl/maps/32M1gBsbqGdmw6e27" target="_blank">
-            Mapa atrakcji
-          </button>
-          <button
+          <a
+            href="https://goo.gl/maps/32M1gBsbqGdmw6e27"
+            target="_blank"
+            class="button"
+            ><button>Mapa atrakcji</button></a
+          >
+          <a
             href="http://www.augustow.pl/pl/atrakcje/wycieczki-piesze"
             target="_blank"
+            class="button"
+            ><button>Szlaki piesze</button></a
           >
-            Szlaki piesze
-          </button>
         </div>
       </article>
 
@@ -483,14 +520,15 @@
             <a
               href="https://www.facebook.com/LakeView-Apartamenty-w-Przewi%C4%99zi-174137271041637/"
               target="_blank"
-              class="icon fa-facebook"
-            ></a>
+              class="fa-brands fa-facebook-f"
+            >
+            </a>
           </li>
           <li>
             <a
               href="https://www.instagram.com/lakeview.apartamenty/"
               target="_blank"
-              class="icon fa-instagram"
+              class="fa-brands fa-instagram"
             ></a>
           </li>
         </ul>
