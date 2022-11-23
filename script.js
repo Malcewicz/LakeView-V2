@@ -27,3 +27,30 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", lazyload);
   window.addEventListener("orientationChange", lazyload);
 });
+
+const menutoggle = document.getElementById("#menu-toggle");
+const menu = document.getElementById("menu");
+const nav = document.querySelector("nav");
+const header = document.querySelector("header");
+const main = document.querySelector("main");
+const footer = document.querySelector("footer");
+
+function toggleMenu() {
+  menu.classList.toggle("active");
+  nav.classList.toggle("bd-open");
+  header.classList.toggle("bd-open");
+  main.classList.toggle("bd-open");
+  footer.classList.toggle("bd-open");
+};
+
+main.addEventListener("click", () => {
+  if (document.getElementById("menu").classList.contains("active")) {
+    toggleMenu();
+  }
+}, true);
+
+header.addEventListener("click", () => {
+  if (document.getElementById("menu").classList.contains("active")) {
+    toggleMenu();
+  }
+}, true);

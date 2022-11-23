@@ -8,22 +8,38 @@
 }
 
 html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
     background: #fff;
+    width: 100%;
     padding: 0;
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* .bd-open {
+    position: absolute;
+} */
+
+.bd-open {
+    transition: all 0.5s ease;
+    transform: translateX(-250px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     margin: 0;
 }
 
-h1, h2 {
+h1,
+h2 {
     padding: 0.5rem 0 1.5rem 0;
     text-transform: uppercase;
 }
@@ -50,11 +66,11 @@ nav {
     width: 100%;
     height: 50px;
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
-    background: 
-    linear-gradient(180deg, #000000 0%,
-     rgba(0, 0, 0, 0.91) 36.46%,
-     rgba(0, 0, 0, 0.83) 72.92%,
-     rgba(0, 0, 0, 0.72) 100%);
+    background:
+        linear-gradient(180deg, #000000 0%,
+            rgba(0, 0, 0, 0.90) 42%,
+            rgba(0, 0, 0, 0.84) 73%,
+            rgba(0, 0, 0, 0.72) 100%);
     z-index: 100;
 }
 
@@ -65,7 +81,7 @@ nav {
     top: 13px;
 }
 
-#logo > a {
+#logo>a {
     width: 180px;
     font-family: 'Raleway';
     font-style: normal;
@@ -83,16 +99,40 @@ nav {
     top: 11px;
 }
 
+#menu-toggle {
+    cursor: pointer;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 0;
+    z-index: 1;
+    background-color: #333;
+    background: linear-gradient(270deg,
+            rgba(0, 0, 0, 0.97) 0%,
+            rgba(0, 0, 0, 0.95) 50%,
+            rgba(0, 0, 0, 0.93) 100%);
+    overflow-x: hidden;
+}
+
+.active {
+    width: 250px !important;
+    transition: all 0.5s ease;
+}
+
 header {
-    position: relative; 
+    position: relative;
     top: 0;
     width: 100%;
     height: 250px;
-	background-image: url("../img/background.webp");
+    background-image: url("../img/background.webp");
     background-attachment: cover;
-	background-position: top;
-	background-size: cover;
-	background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #header-text {
@@ -106,7 +146,7 @@ header {
     text-align: center;
 }
 
-#header-text > h1 {
+#header-text>h1 {
     text-shadow: 1px 2px 3px #000000;
     text-transform: none;
     font-size: 2rem;
@@ -115,7 +155,7 @@ header {
     padding: 0;
 }
 
-#header-text > h3 {
+#header-text>h3 {
     text-shadow: 1px 2px 2px #000000;
     font-weight: 500;
     font-size: 1.25rem;
@@ -138,32 +178,67 @@ article {
     max-width: 600px;
 }
 
-.image-gallery > img {
+.image-gallery>img {
     max-width: 100%;
+    border-radius: 5px 5px 0 0;
 }
 
+.image-gallery>h3 {
+    width: 100%;
+    height: 45px;
+    padding-top: 0.7rem;
+    margin-bottom: 0.5rem;
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
 
+.image-gallery>button {
+    width: 40px;
+    height: 35px;
+    padding: 5px 10px;
+    margin: 5px 5px;
+    background: #333;
+}
+
+.image-gallery>button:first-of-type {
+    float: left;
+}
+
+.image-gallery>button:last-of-type {
+    float: right;
+}
+
+.image-gallery>button:hover {
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25) !important;
+}
+
+.image-gallery>button>i {
+    color: #fff;
+    width: 100%;
+    font-size: 18px;
+}
 
 table {
-	margin: 0 0 1rem 0;
-	width: 100%;
+    margin: 0 0 1rem 0;
+    width: 100%;
     font-size: 15.5px;
     border-spacing: 0;
 }
 
 table tbody tr:nth-child(2n+ 1) {
-	background-color: rgba(144, 144, 144, 0.075);
+    background-color: rgba(144, 144, 144, 0.075);
 }
 
 table td {
-	padding: 0.75rem 0.75rem;
+    padding: 0.75rem 0.75rem;
     border: solid 1px rgba(144, 144, 144, 0.25);
 }
 
 table th {
-	font-weight: 700;
-	padding: 0 0.75rem 0.75rem 0.75rem;
-	text-align: left;
+    font-weight: 700;
+    padding: 0 0.75rem 0.75rem 0.75rem;
+    text-align: left;
 }
 
 table thead th {
@@ -176,7 +251,8 @@ table tfoot td {
     padding: 0.5rem 0.5rem;
 }
 
-.card > h3, .card > .subtitle {
+.card>h3,
+.card>.subtitle {
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
 }
@@ -186,6 +262,14 @@ table tfoot td {
     font-weight: 500;
 }
 
+.card {
+    margin-top: 1rem;
+}
+
+.card:first-of-type {
+    margin-top: 0;
+}
+
 .round-img {
     width: 100%;
     border-radius: 100%;
@@ -193,40 +277,50 @@ table tfoot td {
 
 .round-img img {
     border: solid 5px rgba(144, 144, 144, 0.25);
-	border-radius: 100%;
-    max-width: 100%;
+    border-radius: 100%;
+    max-width: 90%;
 }
 
 a.button {
     width: 100%;
+    color: #333;
 }
 
-a.button > button {
+a.button>button {
     background: rgba(50, 50, 55, 0.95);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
+a.button>button:hover {
+    background-color: rgb(68, 65, 75);
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.30), 0 15px 30px 0 rgba(0, 0, 0, 0.25);
+}
+
 button {
     display: inline-block;
-    background-color: #323037;
-	border-radius: 5px;
-	border: none;
+    background-color: #333;
+    border-radius: 5px;
+    border: none;
     color: #fff;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
     font-size: 16px;
+    cursor: pointer;
     transition-duration: 0.5s;
     padding: 1rem 2rem;
     margin: 0.25rem 0;
     width: 100%;
+    max-width: 400px;
 }
 
-button:hover, button:focus, button:active {
+button:hover,
+button:focus,
+button:active {
     background-color: #3e3c45;
-    box-shadow: 0 10px 15px 0 rgba(0,0,0,0.25), 0 15px 30px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.25), 0 15px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
 #kontakt {
@@ -238,19 +332,22 @@ button:hover, button:focus, button:active {
     padding: 1.5rem 5vw 1rem 5vw;
 }
 
-#kontakt > h2, #kontakt > p, #kontakt > p > a {
+#kontakt>h2,
+#kontakt>p,
+#kontakt>p>a {
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
     text-decoration: none;
 }
 
-#kontakt > h2 {
+#kontakt>h2 {
     color: #f6f6f6;
     font-size: 1.5rem;
     text-shadow: 1px 1px 3px #000000;
 }
 
-#kontakt > p, #kontakt > p > a {
+#kontakt>p,
+#kontakt>p>a {
     color: #fff;
     font-size: 1.15rem;
     line-height: 75%;
@@ -267,65 +364,96 @@ button:hover, button:focus, button:active {
     background-repeat: no-repeat;
 }
 
-ul.icons {
-	cursor: default;
-	list-style: none;
-	padding-left: 0;
-}
-
-ul.icons li {
-	display: inline-block;
-	padding: 0 1em 0 0;
-}
-
-ul.icons li:last-child {
-	padding-right: 0;
-}
-
-ul.icons li .icon:before {
-	font-size: 2em;
-}
-
 footer {
-	padding: 2.5rem 5vw 1.5rem 5vw;
-	background: #f6f6f6;
-	color: #aaa;
-	text-align: center;
+    padding: 2.5rem 5vw 1.5rem 5vw;
+    background: #f6f6f6;
+    color: #aaa;
+    text-align: center;
     font-weight: 500;
 }
 
 footer .icons {
-	font-size: 1.6em;
+    font-size: 3rem;
+    cursor: default;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 footer .icons li {
-	padding-right: 2.5em;
+    display: inline-block;
+    padding: 0 2rem 0 0;
 }
 
 footer .icons li:last-child {
-	padding-right: 0;
+    padding-right: 0;
+}
+
+a.fa-brands {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 50px;
+    color: #666;
 }
 
 .copyright {
-	margin: 1em 0;
-	padding: 0;
-	text-align: center;
+    margin: 1em 0;
+    padding: 0;
+    text-align: center;
 }
 
-.copyright > p {
+.copyright>p {
     padding: 0 0 0.5rem 0;
 }
 
 @media screen and (min-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p,
+    .subtitle {
+        font-size: 1.15rem;
+        line-height: 160%;
+    }
+
+    #logo>a {
+        font-size: 22px;
+    }
+
+    #header-text>h1 {
+        font-size: 2.5rem;
+        text-shadow: 3px 3px 3px #000000;
+    }
+
+    #header-text>h3 {
+        font-size: 1.5rem;
+    }
+
+    .image-gallery>h3 {
+        padding-top: 0.5rem;
+    }
+
     header {
         height: 30vh
     }
+
     article {
         padding: 2rem 6vw;
     }
+
     #logo {
         left: 6vw;
+        top: 12px;
+        height: 22px;
     }
+
     .material-icons.md-28 {
         right: 6vw;
     }
