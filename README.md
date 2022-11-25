@@ -1,4 +1,4 @@
-# LakeView-V2
+# LakeView Przewięź V2
 
 Welcome to the official website of LakeView Przewięź apartamenty.
 
