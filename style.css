@@ -5,7 +5,7 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
     color: #484848;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
 }
 
 html {
@@ -19,12 +19,8 @@ body {
     margin: 0;
 }
 
-/* .bd-open {
-    position: absolute;
-} */
-
 .bd-open {
-    transition: all 0.5s ease;
+    transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
     transform: translateX(-250px);
 }
 
@@ -117,12 +113,12 @@ nav {
             rgba(0, 0, 0, 0.95) 50%,
             rgba(0, 0, 0, 0.93) 100%);
     overflow-x: hidden;
-    transition: all 0.5s ease;
+    transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
 }
 
 .active {
     width: 250px !important;
-    transition: all 0.5s ease;
+    transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
 }
 
 #menu > div {
