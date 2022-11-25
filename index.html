@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Cache-control" content="max-age=31536000" />
+    <meta http-equiv="Cache-control" content="max-age=15552000" />
+    <meta http-equiv="Cache-control" content="public" />
     <title>LakeView Przewięź</title>
     <meta name="author" content="Maciej Bernatowicz" />
     <meta
@@ -18,7 +19,7 @@
     />
     <meta name="rating" content="general" />
 
-    <script>
+    <script defer>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -32,7 +33,7 @@
     </script>
 
     <script
-      async
+      defer
       id="Cookiebot"
       src="https://consent.cookiebot.com/uc.js"
       data-cbid="7d334f03-ad66-4c94-98fb-d31f040af33a"
@@ -63,6 +64,8 @@
       rel="stylesheet preload"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+
+    <link rel="preload" as="image" href="./img/background.webp" />
 
     <script defer src="script.js"></script>
   </head>
@@ -155,7 +158,12 @@
         <h2>APARTAMENTY I DOMEK</h2>
         <div class="image-gallery">
           <!-- Gallery 1 -->
-          <img class="mySlides" src="img/kuchnia1.webp" alt="Zdjęcie kuchni" />
+          <img
+            class="mySlides"
+            src="img/kuchnia1.webp"
+            alt="Zdjęcie kuchni"
+            loading="lazy"
+          />
           <img
             class="mySlides"
             src="img/kuchnia2.webp"
@@ -237,6 +245,7 @@
             class="mySlides2"
             src="img/domek_zewnatrz_2.webp"
             alt="Zdjęcie domku z zewnątrz"
+            loading="lazy"
           />
           <img
             class="mySlides2"
@@ -286,6 +295,7 @@
             class="mySlides3"
             src="img/plac_zabaw.webp"
             alt="Zdjęcie placu zabaw"
+            loading="lazy"
           />
           <img
             class="mySlides3"
@@ -459,7 +469,11 @@
         <h2>POBLISKIE ATRAKCJE</h2>
         <div class="card">
           <div class="round-img">
-            <img src="img/atrakcje1.webp" alt="Kanał Augustowski" />
+            <img
+              src="img/atrakcje1.webp"
+              alt="Kanał Augustowski"
+              loading="lazy"
+            />
           </div>
           <h3>Kanał Augustowski</h3>
           <p class="subtitle">Najdłuższy zabytek w Polsce</p>
@@ -475,7 +489,11 @@
         </div>
         <div class="card">
           <div class="round-img">
-            <img src="img/atrakcje2.webp" alt="Kajak na Rospudzie" />
+            <img
+              src="img/atrakcje2.webp"
+              alt="Kajak na Rospudzie"
+              loading="lazy"
+            />
           </div>
           <h3>Czarna Hańcza i Rospuda</h3>
           <p class="subtitle">Dwie piękne rzeki na spływ kajakowy</p>
@@ -490,7 +508,11 @@
         </div>
         <div class="card">
           <div class="round-img">
-            <img src="img/atrakcje3.webp" alt="Kaplica w Studzienicznej" />
+            <img
+              src="img/atrakcje3.webp"
+              alt="Kaplica w Studzienicznej"
+              loading="lazy"
+            />
           </div>
           <h3>Studzieniczna</h3>
           <p class="subtitle">Piękna kaplica i szlak papieski</p>
@@ -506,7 +528,7 @@
         </div>
         <div class="card">
           <div class="round-img">
-            <img src="img/atrakcje4.webp" alt="Park linowy" />
+            <img src="img/atrakcje4.webp" alt="Park linowy" loading="lazy" />
           </div>
           <h3>Park Linowy</h3>
           <p class="subtitle">Atrakcja dla odważnych</p>
