@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
     color: #484848;
+    transition: transform 0.5s ease;
 }
 
 html {
@@ -116,11 +117,47 @@ nav {
             rgba(0, 0, 0, 0.95) 50%,
             rgba(0, 0, 0, 0.93) 100%);
     overflow-x: hidden;
+    transition: all 0.5s ease;
 }
 
 .active {
     width: 250px !important;
     transition: all 0.5s ease;
+}
+
+#menu > div {
+    width: 100%;
+    margin: 0 20px;
+    padding: 10px 0 10px 0;
+}
+
+#menu > div:first-of-type {
+    margin-top: 20px;
+    padding: 0 0 10px 0;
+}
+
+#menu > div::after {
+    content: '';
+    position: absolute;
+    display: block;
+    margin-top: 10px;
+    width: 210px;
+    height: 1px;
+    background: #666;
+}
+
+#menu > div > a {
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    height: 100%;
+    width: 100%;
 }
 
 header {
@@ -456,5 +493,13 @@ a.fa-brands {
 
     .material-icons.md-28 {
         right: 6vw;
+    }
+
+    .card:nth-of-type(2n-1) {
+        float: left;
+    }
+
+    .card:nth-of-type(2n) {
+        float: right;
     }
 }

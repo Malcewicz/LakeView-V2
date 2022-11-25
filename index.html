@@ -7,7 +7,16 @@
     <meta http-equiv="Cache-control" content="max-age=31536000" />
     <title>LakeView Przewięź</title>
     <meta name="author" content="Maciej Bernatowicz" />
-    <link rel="icon" href="img/logo.png" />
+    <link
+      rel="icon"
+      href="img/logo.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      href="img/logo-dark.png"
+      media="(prefers-color-scheme: dark)"
+    />
     <link rel="stylesheet" href="style.css" />
     <meta
       name="description"
@@ -79,21 +88,21 @@
       </div>
     </nav>
     <div id="menu">
-      <span>
-        <a href="#lokalizacja">Lokalizacja</a>
-      </span>
-      <span>
-        <a href="#apartamenty">Apartamenty i domek</a>
-      </span>
-      <span>
-        <a href="#oferta">Oferta</a>
-      </span>
-      <span>
-        <a href="#atrakcje">Atrakcje</a>
-      </span>
-      <span>
-        <a href="#kontakt">Kontakt</a>
-      </span>
+      <div>
+        <a href="#lokalizacja" onclick="toggleMenu()">Lokalizacja</a>
+      </div>
+      <div>
+        <a href="#apartamenty" onclick="toggleMenu()">Apartamenty i domek</a>
+      </div>
+      <div>
+        <a href="#oferta" onclick="toggleMenu()">Oferta</a>
+      </div>
+      <div>
+        <a href="#atrakcje" onclick="toggleMenu()">Atrakcje</a>
+      </div>
+      <div>
+        <a href="#kontakt" onclick="toggleMenu()">Kontakt</a>
+      </div>
     </div>
 
     <!-- Header -->
