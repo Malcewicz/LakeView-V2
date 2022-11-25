@@ -32,6 +32,7 @@
     </script>
 
     <script
+      async
       id="Cookiebot"
       src="https://consent.cookiebot.com/uc.js"
       data-cbid="7d334f03-ad66-4c94-98fb-d31f040af33a"
@@ -59,6 +60,11 @@
     />
 
     <script async src="script.js"></script>
+
+    <link
+      rel="stylesheet preload"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
   </head>
 
   <body>
@@ -70,10 +76,6 @@
         style="display: none; visibility: hidden"
       ></iframe
     ></noscript>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
     <script
       src="https://kit.fontawesome.com/02bee5bd99.js"
       crossorigin="anonymous"
@@ -87,7 +89,6 @@
         </span>
         <span
           aria-controls="menu"
-          aria-expanded="false"
           onclick="toggleMenu()"
           class="material-icons md-28"
           id="menu-toggle"
@@ -141,6 +142,7 @@
           style="border: none"
           allow="fullscreen"
           aria-hidden="false"
+          aria-label="mapa"
           tabindex="0"
           width="100%"
           height="450"
@@ -207,10 +209,18 @@
             data-src="img/apart_zewnatrz.webp"
             alt="Zdjęcie domku apartamentów z zewnątrz"
           />
-          <button class="button button-left" onclick="plusDivs(-1)">
+          <button
+            class="button button-left"
+            onclick="plusDivs(-1)"
+            aria-label="galeria obrazów w lewo"
+          >
             <i class="fa-solid fa-angle-left"></i>
           </button>
-          <button class="button button-right" onclick="plusDivs(1)">
+          <button
+            class="button button-right"
+            onclick="plusDivs(1)"
+            aria-label="galeria obrazów w prawo"
+          >
             <i class="fa-solid fa-angle-right"></i>
           </button>
           <h3>Apartamenty</h3>
@@ -248,10 +258,18 @@
             data-src="img/salon_domek1.webp"
             alt="Zdjęcie salonu w domku"
           />
-          <button class="button-left" onclick="plusDivs2(-1)">
+          <button
+            class="button-left"
+            onclick="plusDivs2(-1)"
+            aria-label="galeria obrazów w lewo"
+          >
             <i class="fa-solid fa-angle-left"></i>
           </button>
-          <button class="button-right" onclick="plusDivs2(1)">
+          <button
+            class="button-right"
+            onclick="plusDivs2(1)"
+            aria-label="galeria obrazów w prawo"
+          >
             <i class="fa-solid fa-angle-right"></i>
           </button>
           <h3>Domek</h3>
@@ -299,10 +317,18 @@
             data-src="img/brzeg.webp"
             alt="Zdjęcie brzegu"
           />
-          <button class="button button-left" onclick="plusDivs3(-1)">
+          <button
+            class="button button-left"
+            onclick="plusDivs3(-1)"
+            aria-label="galeria obrazów w lewo"
+          >
             <i class="fa-solid fa-angle-left"></i>
           </button>
-          <button class="button button-right" onclick="plusDivs3(1)">
+          <button
+            class="button button-right"
+            onclick="plusDivs3(1)"
+            aria-label="galeria obrazów w prawo"
+          >
             <i class="fa-solid fa-angle-right"></i>
           </button>
           <h3 class="smaller">Nasze atrakcje</h3>
@@ -539,6 +565,7 @@
               href="https://www.facebook.com/LakeView-Apartamenty-w-Przewi%C4%99zi-174137271041637/"
               target="_blank"
               class="fa-brands fa-facebook-f"
+              aria-label="Facebook"
             >
             </a>
           </li>
@@ -547,6 +574,7 @@
               href="https://www.instagram.com/lakeview.apartamenty/"
               target="_blank"
               class="fa-brands fa-instagram"
+              aria-label="Instagram"
             ></a>
           </li>
         </ul>
