@@ -7,28 +7,16 @@
     <meta http-equiv="Cache-control" content="max-age=31536000" />
     <title>LakeView Przewięź</title>
     <meta name="author" content="Maciej Bernatowicz" />
-    <link
-      rel="icon"
-      href="img/logo.png"
-      media="(prefers-color-scheme: light)"
-    />
-    <link
-      rel="icon"
-      href="img/logo-dark.png"
-      media="(prefers-color-scheme: dark)"
-    />
-    <link rel="stylesheet" href="style.css" />
     <meta
       name="description"
-      content="Serdecznie zapraszamy do pięknych całorocznych apartamentów zlokalizowanych nad samym jeziorem Studzienicznym w Przewięzi w północno wschodniej części Augustowa.
-            Przestrzeń z ogrodzoną działką, własnym dostępem do wody + własny pomost i łagodna piaszczysta plaża, miejsca na ogniska, łódki, kajaki, grill, meble ogrodowe oraz plac zabaw."
+      content="Serdecznie zapraszamy do pięknych całorocznych apartamentów zlokalizowanych nad samym jeziorem Studzienicznym w Przewięzi w północno wschodniej części Augustowa."
     />
     <meta
       name="keywords"
       content="LAKEVIEW, lakeview, nocleg przewięź, przewięź nocleg, domki przewięź, domki augustów, mieszkanie przewięź, mieszkanie augustów, mieszkania przewięź, mieszkania augustów, wynajem, 
             Augustów, Przewięź, apartamenty przewięź, apartamenty augustów, apartament przewięź, apartament augustów, apartament, apartamenty, nocleg augustów, wynajem przewięź, wynajem augustów"
     />
-    <!-- Google Tag Manager -->
+    <meta name="rating" content="general" />
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -41,7 +29,6 @@
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-N737QNV");
     </script>
-    <!-- End Google Tag Manager -->
     <script
       id="Cookiebot"
       src="https://consent.cookiebot.com/uc.js"
@@ -50,17 +37,29 @@
       type="text/javascript"
     ></script>
     <link
+      rel="icon"
+      href="img/logo.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      href="img/logo-dark.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <link
+      defer
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
     <script
+      defer
       src="https://kit.fontawesome.com/02bee5bd99.js"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-N737QNV"
@@ -69,7 +68,6 @@
         style="display: none; visibility: hidden"
       ></iframe
     ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
     <!-- Navbar -->
     <nav>
@@ -89,19 +87,19 @@
     </nav>
     <div id="menu">
       <div>
-        <a href="#lokalizacja" onclick="toggleMenu()">Lokalizacja</a>
+        <a onclick="toggleMenu()" id="menu-lokalizacja">Lokalizacja</a>
       </div>
       <div>
-        <a href="#apartamenty" onclick="toggleMenu()">Apartamenty i domek</a>
+        <a onclick="toggleMenu()" id="menu-apartamenty">Apartamenty i domek</a>
       </div>
       <div>
-        <a href="#oferta" onclick="toggleMenu()">Oferta</a>
+        <a onclick="toggleMenu()" id="menu-oferta">Oferta</a>
       </div>
       <div>
-        <a href="#atrakcje" onclick="toggleMenu()">Atrakcje</a>
+        <a onclick="toggleMenu()" id="menu-atrakcje">Atrakcje</a>
       </div>
       <div>
-        <a href="#kontakt" onclick="toggleMenu()">Kontakt</a>
+        <a onclick="toggleMenu()" id="menu-kontakt">Kontakt</a>
       </div>
     </div>
 

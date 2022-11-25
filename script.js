@@ -28,12 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("orientationChange", lazyload);
 });
 
-const menutoggle = document.getElementById("#menu-toggle");
+const menuToggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
 const nav = document.querySelector("nav");
 const header = document.querySelector("header");
 const main = document.querySelector("main");
 const footer = document.querySelector("footer");
+const headerOffset = 40;
 
 function toggleMenu() {
   menu.classList.toggle("active");
@@ -41,16 +42,94 @@ function toggleMenu() {
   header.classList.toggle("bd-open");
   main.classList.toggle("bd-open");
   footer.classList.toggle("bd-open");
-};
-
-main.addEventListener("click", () => {
-  if (document.getElementById("menu").classList.contains("active")) {
-    toggleMenu();
+  if (menuToggle.innerHTML === "menu") {
+    menuToggle.innerHTML = "close";
+  } else {
+    menuToggle.innerHTML = "menu";
   }
-}, true);
+}
 
-header.addEventListener("click", () => {
-  if (document.getElementById("menu").classList.contains("active")) {
-    toggleMenu();
-  }
-}, true);
+header.addEventListener(
+  "click",
+  () => {
+    if (document.getElementById("menu").classList.contains("active")) {
+      toggleMenu();
+    }
+  },
+  true
+);
+
+main.addEventListener(
+  "click",
+  () => {
+    if (document.getElementById("menu").classList.contains("active")) {
+      toggleMenu();
+    }
+  },
+  true
+);
+
+document
+  .getElementById("menu-lokalizacja")
+  .addEventListener("click", scrollToLokalizacja);
+function scrollToLokalizacja() {
+  let lokalizacja = document.getElementById("lokalizacja");
+  let lokalizacjaPosition = lokalizacja.getBoundingClientRect().top;
+  let offsetLokalizacja = lokalizacjaPosition + window.scrollY - headerOffset;
+  window.scrollTo({
+    top: offsetLokalizacja,
+    behavior: "smooth",
+  });
+}
+
+document
+  .getElementById("menu-apartamenty")
+  .addEventListener("click", scrollToApartamenty);
+function scrollToApartamenty() {
+  let apartamenty = document.getElementById("apartamenty");
+  let apartamentyPosition = apartamenty.getBoundingClientRect().top;
+  let offsetApart = apartamentyPosition + window.scrollY - headerOffset;
+  window.scrollTo({
+    top: offsetApart,
+    behavior: "smooth",
+  });
+}
+
+document
+  .getElementById("menu-oferta")
+  .addEventListener("click", scrollToOferta);
+function scrollToOferta() {
+  let oferta = document.getElementById("oferta");
+  let ofertaPosition = oferta.getBoundingClientRect().top;
+  let offsetOferta = ofertaPosition + window.scrollY - headerOffset;
+  window.scrollTo({
+    top: offsetOferta,
+    behavior: "smooth",
+  });
+}
+
+document
+  .getElementById("menu-atrakcje")
+  .addEventListener("click", scrollToAtrakcje);
+function scrollToAtrakcje() {
+  let atrakcje = document.getElementById("atrakcje");
+  let atrakcjePosition = atrakcje.getBoundingClientRect().top;
+  let offsetAtrakcje = atrakcjePosition + window.scrollY - headerOffset;
+  window.scrollTo({
+    top: offsetAtrakcje,
+    behavior: "smooth",
+  });
+}
+
+document
+  .getElementById("menu-kontakt")
+  .addEventListener("click", scrollToKontakt);
+function scrollToKontakt() {
+  let kontakt = document.getElementById("kontakt");
+  let kontaktPosition = kontakt.getBoundingClientRect().top;
+  let offsetKontakt = kontaktPosition + window.scrollY - headerOffset;
+  window.scrollTo({
+    top: offsetKontakt,
+    behavior: "smooth",
+  });
+}

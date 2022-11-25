@@ -129,6 +129,7 @@ nav {
     width: 100%;
     margin: 0 20px;
     padding: 10px 0 10px 0;
+    cursor: pointer;
 }
 
 #menu > div:first-of-type {
@@ -149,7 +150,7 @@ nav {
 #menu > div > a {
     font-family: 'Raleway', sans-serif;
     color: #fff;
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 500;
     text-decoration: none;
     text-transform: uppercase;
