@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Cache-control" content="max-age=15552000" />
     <meta http-equiv="Cache-control" content="public" />
+    <meta http-equiv="Cache-control" content="max-age=15552000" />
+    <meta http-equiv="Content-encoding" content="br" />
     <title>LakeView Przewięź</title>
     <meta name="author" content="Maciej Bernatowicz" />
     <meta
@@ -65,7 +66,12 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
 
-    <link rel="preload" as="image" href="./img/background.webp" />
+    <link
+      rel="preload"
+      as="image"
+      href="./img/background.webp"
+      type="image/png"
+    />
 
     <script defer src="script.js"></script>
   </head>
@@ -101,19 +107,25 @@
     </nav>
     <div id="menu">
       <div>
-        <a onclick="toggleMenu()" id="menu-lokalizacja">Lokalizacja</a>
+        <a href="#Lokalizacja" onclick="toggleMenu()" id="menu-lokalizacja"
+          >Lokalizacja</a
+        >
       </div>
       <div>
-        <a onclick="toggleMenu()" id="menu-apartamenty">Apartamenty i domek</a>
+        <a href="#Apartamenty" onclick="toggleMenu()" id="menu-apartamenty"
+          >Apartamenty i domek</a
+        >
       </div>
       <div>
-        <a onclick="toggleMenu()" id="menu-oferta">Oferta</a>
+        <a href="#Oferta" onclick="toggleMenu()" id="menu-oferta">Oferta</a>
       </div>
       <div>
-        <a onclick="toggleMenu()" id="menu-atrakcje">Atrakcje</a>
+        <a href="#Atrakcje" onclick="toggleMenu()" id="menu-atrakcje"
+          >Atrakcje</a
+        >
       </div>
       <div>
-        <a onclick="toggleMenu()" id="menu-kontakt">Kontakt</a>
+        <a href="#Kontakt" onclick="toggleMenu()" id="menu-kontakt">Kontakt</a>
       </div>
     </div>
 
@@ -121,7 +133,7 @@
     <header>
       <div id="header-text">
         <h1>LakeView</h1>
-        <h3>Apartamenty w Przewięzi</h3>
+        <h2>Apartamenty w Przewięzi</h2>
       </div>
     </header>
 
