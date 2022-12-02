@@ -38,10 +38,10 @@ const headerOffset = 40;
 
 function toggleMenu() {
   menu.classList.toggle("active");
-  nav.classList.toggle("bd-open");
-  header.classList.toggle("bd-open");
-  main.classList.toggle("bd-open");
-  footer.classList.toggle("bd-open");
+  nav.classList.toggle("menu-open");
+  header.classList.toggle("menu-open");
+  main.classList.toggle("menu-open");
+  footer.classList.toggle("menu-open");
   if (menuToggle.innerHTML === "menu") {
     menuToggle.innerHTML = "close";
   } else {
@@ -52,7 +52,7 @@ function toggleMenu() {
 header.addEventListener(
   "click",
   () => {
-    if (document.getElementById("menu").classList.contains("active")) {
+    if (menu.classList.contains("active")) {
       toggleMenu();
     }
   },
@@ -62,7 +62,7 @@ header.addEventListener(
 main.addEventListener(
   "click",
   () => {
-    if (document.getElementById("menu").classList.contains("active")) {
+    if (menu.classList.contains("active")) {
       toggleMenu();
     }
   },

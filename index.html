@@ -20,7 +20,7 @@
     />
     <meta name="rating" content="general" />
 
-    <script defer>
+    <script async>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -32,15 +32,6 @@
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-N737QNV");
     </script>
-
-    <script
-      defer
-      id="Cookiebot"
-      src="https://consent.cookiebot.com/uc.js"
-      data-cbid="7d334f03-ad66-4c94-98fb-d31f040af33a"
-      data-blockingmode="auto"
-      type="text/javascript"
-    ></script>
 
     <link
       rel="icon"
@@ -55,7 +46,8 @@
     />
 
     <link
-      rel="stylesheet"
+      rel="stylesheet preload"
+      as="style"
       href="style.css"
       media="print"
       onload="this.media='all'"
@@ -74,7 +66,20 @@
       type="image/png"
     />
 
-    <script defer src="script.js"></script>
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="style.css"
+        media="print"
+        onload="this.media='all'"
+      />
+      <link
+        rel="stylesheet preload"
+        as="style"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap"
+      />
+      <link rel="preload" as="image" href="./img/background.webp" />
+    </noscript>
   </head>
 
   <body>
@@ -86,16 +91,12 @@
         style="display: none; visibility: hidden"
       ></iframe
     ></noscript>
-    <script
-      src="https://kit.fontawesome.com/02bee5bd99.js"
-      crossorigin="anonymous"
-    ></script>
 
     <!-- Navbar -->
     <nav>
       <div id="nav">
         <span id="logo">
-          <a href="#">LakeView Przewięź</a>
+          <a href="/">LakeView Przewięź</a>
         </span>
         <span
           aria-controls="menu"
@@ -176,6 +177,7 @@
             src="img/kuchnia1.webp"
             alt="Zdjęcie kuchni"
             loading="lazy"
+            max-width="100%"
           />
           <img
             class="mySlides"
@@ -259,6 +261,7 @@
             src="img/domek_zewnatrz_2.webp"
             alt="Zdjęcie domku z zewnątrz"
             loading="lazy"
+            max-width="100%"
           />
           <img
             class="mySlides2"
@@ -309,6 +312,7 @@
             src="img/plac_zabaw.webp"
             alt="Zdjęcie placu zabaw"
             loading="lazy"
+            max-width="100%"
           />
           <img
             class="mySlides3"
@@ -486,6 +490,7 @@
               src="img/atrakcje1.webp"
               alt="Kajak na Rospudzie"
               loading="lazy"
+              width="90%"
             />
           </div>
           <h3>Czarna Hańcza i Rospuda</h3>
@@ -505,6 +510,7 @@
               src="img/atrakcje2.webp"
               alt="Kanał Augustowski"
               loading="lazy"
+              width="90%"
             />
           </div>
           <h3>Kanał Augustowski</h3>
@@ -525,6 +531,7 @@
               src="img/atrakcje3.webp"
               alt="Kaplica w Studzienicznej"
               loading="lazy"
+              width="90%"
             />
           </div>
           <h3>Studzieniczna</h3>
@@ -541,7 +548,12 @@
         </div>
         <div class="card">
           <div class="round-img">
-            <img src="img/atrakcje4.webp" alt="Park linowy" loading="lazy" />
+            <img
+              src="img/atrakcje4.webp"
+              alt="Park linowy"
+              loading="lazy"
+              width="90%"
+            />
           </div>
           <h3>Park Linowy</h3>
           <p class="subtitle">Atrakcja dla odważnych</p>
@@ -624,5 +636,10 @@
         </div>
       </div>
     </footer>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/02bee5bd99.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
