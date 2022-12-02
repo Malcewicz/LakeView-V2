@@ -45,13 +45,7 @@
       media="(prefers-color-scheme: dark)"
     />
 
-    <link
-      rel="stylesheet preload"
-      as="style"
-      href="style.css"
-      media="print"
-      onload="this.media='all'"
-    />
+    <link rel="stylesheet preload" as="style" href="style.css" />
 
     <link
       rel="stylesheet preload"
@@ -67,12 +61,7 @@
     />
 
     <noscript>
-      <link
-        rel="stylesheet"
-        href="style.css"
-        media="print"
-        onload="this.media='all'"
-      />
+      <link rel="stylesheet" href="style.css" />
       <link
         rel="stylesheet preload"
         as="style"
@@ -123,7 +112,7 @@
       </div>
       <div>
         <a href="#Atrakcje" onclick="toggleMenu()" id="menu-atrakcje"
-          >Atrakcje</a
+          >Okoliczne atrakcje</a
         >
       </div>
       <div>
@@ -143,16 +132,19 @@
     <main>
       <!-- Lokalizacja -->
       <article id="lokalizacja">
-        <h2>LOKALIZACJA</h2>
-        <p>
-          Apartamenty są zlokalizowane nad samym jeziorem Studzienicznym w
-          Przewięzi w północno-wschodniej części Augustowa. Obiekt w
-          bezpośrednim sąsiedztwie lasu i jeziora, w bardzo malowniczym, cichym
-          i spokojnym miejscu. Do najbliższego sklepu i restauracji jest 900m, a
-          do centrum miasta ok. 9km. Dookoła lasy, jeziora, krystalicznie czyste
-          powietrze, strefa ochronna Kanału Augustowskiego, obszar Natura2000,
-          strefa ciszy i centrum Puszczy Augustowskiej.
-        </p>
+        <div class="text">
+          <h2>LOKALIZACJA</h2>
+          <p>
+            Apartamenty są zlokalizowane nad samym jeziorem Studzienicznym w
+            Przewięzi w północno-wschodniej części Augustowa. Obiekt w
+            bezpośrednim sąsiedztwie lasu i jeziora, w bardzo malowniczym,
+            cichym i spokojnym miejscu. Do najbliższego sklepu i restauracji
+            jest 900m, a do centrum miasta ok. 9km. Dookoła lasy, jeziora,
+            krystalicznie czyste powietrze, strefa ochronna Kanału
+            Augustowskiego, obszar Natura2000, strefa ciszy i centrum Puszczy
+            Augustowskiej.
+          </p>
+        </div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1878.9636189891849!2d23.107021026604947!3d53.87017090659561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e059fb33ea96f5%3A0x9b7dabbe23aa282d!2zTGFrZVZpZXcgUHJ6ZXdpxJnFug!5e1!3m2!1spl!2spl!4v1643311041080!5m2!1spl!2spl"
           title="mapa"
@@ -483,7 +475,7 @@
       </article>
       <!-- Pobliskie atrakcje -->
       <article id="atrakcje" class="grey">
-        <h2>POBLISKIE ATRAKCJE</h2>
+        <h2>OKOLICZNE ATRAKCJE</h2>
         <div class="card">
           <div class="round-img">
             <img
@@ -493,16 +485,18 @@
               width="90%"
             />
           </div>
-          <h3>Czarna Hańcza i Rospuda</h3>
-          <p class="subtitle">Dwie piękne rzeki na spływ kajakowy</p>
-          <p>
-            Czarna Hańcza to największa rzeka na Suwalszczyźnie, która bierze
-            początek w najgłębszym jeziorze tego obszaru - Hańczy. Ma 108km po
-            stronie Polskiej i 34km po stronie Białoruskiej. Rospuda przepływa
-            przez 9 jezior, zaczynając od j. Rozpuda i kończąc na j. Necko, na
-            terenie Pojezierza Suwalskiego i Puszczy Augustowskiej. Łącznie ma
-            aż 102km.
-          </p>
+          <div class="card-text">
+            <h3>Czarna Hańcza i Rospuda</h3>
+            <p class="subtitle">Dwie piękne rzeki na spływ kajakowy</p>
+            <p>
+              Czarna Hańcza to największa rzeka na Suwalszczyźnie, która bierze
+              początek w najgłębszym jeziorze tego obszaru - Hańczy. Ma 108km po
+              stronie Polskiej i 34km po stronie Białoruskiej. Rospuda przepływa
+              przez 9 jezior, zaczynając od j. Rozpuda i kończąc na j. Necko, na
+              terenie Pojezierza Suwalskiego i Puszczy Augustowskiej. Łącznie ma
+              aż 102km.
+            </p>
+          </div>
         </div>
         <div class="card">
           <div class="round-img">
@@ -513,17 +507,19 @@
               width="90%"
             />
           </div>
-          <h3>Kanał Augustowski</h3>
-          <p class="subtitle">Najdłuższy zabytek w Polsce</p>
-          <p>
-            Unikatowe w skali europejskiej dzieło budownictwa wodnego z
-            pierwszej połowy XIX wieku. Powodem budowy Kanału Augustowskiego
-            były pruskie restrykcje celne uniemożliwiające spławianie polskich
-            towarów Wisłą do Gdańska. Kanał Augustowski miał połączyć dopływy
-            Wisły, Narew i Biebrzę, z Niemnem, a od Niemna do Bałtyku
-            zaplanowano połączenie poprzez Kanał Widawski, aby ominąć terytorium
-            Prus.
-          </p>
+          <div class="card-text">
+            <h3>Kanał Augustowski</h3>
+            <p class="subtitle">Najdłuższy zabytek w Polsce</p>
+            <p>
+              Unikatowe w skali europejskiej dzieło budownictwa wodnego z
+              pierwszej połowy XIX wieku. Powodem budowy Kanału Augustowskiego
+              były pruskie restrykcje celne uniemożliwiające spławianie polskich
+              towarów Wisłą do Gdańska. Kanał Augustowski miał połączyć dopływy
+              Wisły, Narew i Biebrzę, z Niemnem, a od Niemna do Bałtyku
+              zaplanowano połączenie poprzez Kanał Widawski, aby ominąć
+              terytorium Prus.
+            </p>
+          </div>
         </div>
         <div class="card">
           <div class="round-img">
@@ -534,17 +530,19 @@
               width="90%"
             />
           </div>
-          <h3>Studzieniczna</h3>
-          <p class="subtitle">Piękna kaplica i szlak papieski</p>
-          <p>
-            Położona nad jeziorem o tej samej nazwie, tuż obok Przewięzi. Nazwa
-            jeziora jak i sanktuarium, jej głównej atrakcji, pochodzi od studni,
-            która według legend i wierzeń zawiera wodę uzdrawiającą choroby
-            oczu. Sanktuarium w Studzienicznej jest związane z objawieniami
-            Matki Boskiej, które miały miejsce w XVIII w. W 1999 roku odwiedził
-            ją Papież Jan Paweł II, można podążać jego śladami podczas rejsu
-            statkiem Żeglugi Augustowskiej.
-          </p>
+          <div class="card-text">
+            <h3>Studzieniczna</h3>
+            <p class="subtitle">Piękna kaplica i szlak papieski</p>
+            <p>
+              Położona nad jeziorem o tej samej nazwie, tuż obok Przewięzi.
+              Nazwa jeziora jak i sanktuarium, jej głównej atrakcji, pochodzi od
+              studni, która według legend i wierzeń zawiera wodę uzdrawiającą
+              choroby oczu. Sanktuarium w Studzienicznej jest związane z
+              objawieniami Matki Boskiej, które miały miejsce w XVIII w. W 1999
+              roku odwiedził ją Papież Jan Paweł II, można podążać jego śladami
+              podczas rejsu statkiem Żeglugi Augustowskiej.
+            </p>
+          </div>
         </div>
         <div class="card">
           <div class="round-img">
@@ -555,16 +553,18 @@
               width="90%"
             />
           </div>
-          <h3>Park Linowy</h3>
-          <p class="subtitle">Atrakcja dla odważnych</p>
-          <p>
-            Jeśli ktoś ma więcej energii może odwiedzić Park Linowy Lemur w
-            Augustowie, położony niedaleko drugiego największego mola w Polsce,
-            na jeziorze Necko. To idealne rozwiązanie dla osób lubiących
-            aktywnie spędzać czas, a przy tym chcących dobrze się bawić. Do
-            wyboru jest pięć tras o różnym stopniu trudności. Tuż obok jest też
-            wyciąg nart wodnych.
-          </p>
+          <div class="card-text">
+            <h3>Park Linowy</h3>
+            <p class="subtitle">Atrakcja dla odważnych</p>
+            <p>
+              Jeśli ktoś ma więcej energii może odwiedzić Park Linowy Lemur w
+              Augustowie, położony niedaleko drugiego największego mola w
+              Polsce, na jeziorze Necko. To idealne rozwiązanie dla osób
+              lubiących aktywnie spędzać czas, a przy tym chcących dobrze się
+              bawić. Do wyboru jest pięć tras o różnym stopniu trudności. Tuż
+              obok jest też wyciąg nart wodnych.
+            </p>
+          </div>
         </div>
         <div class="buttons">
           <a
@@ -594,8 +594,8 @@
         <p>LakeView</p>
         <p>16-300 Augustów</p>
         <p>Przewięź 54</p>
-        <p>tel: <a href="tel:+48512456452" class="nr-tel">512 456 452</a></p>
-        <p>tel: <a href="tel:+48518051901" class="nr-tel">518 051 901</a></p>
+        <p>tel: <a href="tel:+48512456452">512 456 452</a></p>
+        <p>tel: <a href="tel:+48518051901">518 051 901</a></p>
         <a href="mailto:lakeview@onet.pl" target="_blank" class="button"
           ><button>Wyślij maila</button></a
         >

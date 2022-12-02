@@ -181,7 +181,7 @@ header {
     text-align: center;
 }
 
-#header-text>h1 {
+#header-text > h1 {
     text-shadow: 1px 2px 3px #000000;
     text-transform: none;
     font-size: 2rem;
@@ -190,7 +190,7 @@ header {
     padding: 0;
 }
 
-#header-text>h2 {
+#header-text > h2 {
     text-shadow: 1px 2px 2px #000000;
     font-weight: 500;
     font-size: 1.25rem;
@@ -214,12 +214,12 @@ article {
     max-width: 600px;
 }
 
-.image-gallery>img {
+.image-gallery > img {
     max-width: 100%;
     border-radius: 5px 5px 0 0;
 }
 
-.image-gallery>h3 {
+.image-gallery > h3 {
     width: 100%;
     height: 45px;
     padding-top: 0.7rem;
@@ -229,7 +229,7 @@ article {
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
-.image-gallery>button {
+.image-gallery > button {
     width: 40px;
     height: 35px;
     padding: 5px 10px;
@@ -237,19 +237,19 @@ article {
     background: #333;
 }
 
-.image-gallery>button:first-of-type {
+.image-gallery > button:first-of-type {
     float: left;
 }
 
-.image-gallery>button:last-of-type {
+.image-gallery > button:last-of-type {
     float: right;
 }
 
-.image-gallery>button:hover {
+.image-gallery > button:hover {
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25) !important;
 }
 
-.image-gallery>button>i {
+.image-gallery > button > i {
     color: #fff;
     width: 100%;
     font-size: 18px;
@@ -289,8 +289,8 @@ table tfoot td {
     padding: 0.5rem 0.5rem;
 }
 
-.card>h3,
-.card>.subtitle {
+.card-text > h3,
+.card-text > .subtitle {
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
 }
@@ -301,11 +301,7 @@ table tfoot td {
 }
 
 .card {
-    margin-top: 1rem;
-}
-
-.card:first-of-type {
-    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 .round-img {
@@ -325,12 +321,12 @@ a.button {
     color: #333;
 }
 
-a.button>button {
+a.button > button {
     background: rgba(50, 50, 55, 0.95);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
-a.button>button:hover {
+a.button > button:hover {
     background-color: rgb(68, 65, 75);
     box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.30), 0 15px 30px 0 rgba(0, 0, 0, 0.25);
 }
@@ -371,22 +367,22 @@ button:active {
     padding: 1.5rem 5vw 1rem 5vw;
 }
 
-#kontakt>h2,
-#kontakt>p,
-#kontakt>p>a {
+#kontakt > h2,
+#kontakt > p,
+#kontakt > p > a {
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
     text-decoration: none;
 }
 
-#kontakt>h2 {
+#kontakt > h2 {
     color: #f6f6f6;
     font-size: 1.5rem;
     text-shadow: 1px 1px 3px #000000;
 }
 
-#kontakt>p,
-#kontakt>p>a {
+#kontakt > p,
+#kontakt > p > a {
     color: #fff;
     font-size: 1.15rem;
     line-height: 75%;
@@ -443,11 +439,82 @@ a.fa-brands {
     text-align: center;
 }
 
-.copyright>p {
+.copyright > p {
     padding: 0 0 0.5rem 0;
 }
 
-@media screen and (min-width: 768px) {
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+    #header-text > h1 {
+        font-size: 3.6rem;
+        text-shadow: 3px 3px 3px #000000;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p, .subtitle {
+        font-size: 1.15rem;
+        line-height: 180%;
+    }
+
+    #logo > a {
+        font-size: 1.5rem;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    header {
+        height: 50vh
+    }
+
+    #header-text > h2 {
+        padding-top: 1rem;
+        font-size: 1.85rem;
+    }
+
+    article {
+        padding: 4rem 20vw;
+    }
+
+    #lokalizacja {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: auto;
+    }
+
+    #lokalizacja > .text {
+        width: 50%;
+    }
+
+    #lokalizacja > iframe {
+        width: 50%;
+        margin-left: 1rem;
+    }
+
+}
+
+
+/* Tablet */
+@media screen and (768px <= width <= 1199px) {
+    #header-text > h1 {
+        font-size: 2.5rem;
+        text-shadow: 3px 3px 3px #000000;
+    }
+
     h2 {
         font-size: 1.8rem;
     }
@@ -462,46 +529,109 @@ a.fa-brands {
         line-height: 160%;
     }
 
-    #logo>a {
-        font-size: 22px;
-    }
-
-    #header-text>h1 {
-        font-size: 2.5rem;
-        text-shadow: 3px 3px 3px #000000;
-    }
-
-    #header-text>h3 {
-        font-size: 1.5rem;
-    }
-
-    .image-gallery>h3 {
-        padding-top: 0.5rem;
-    }
-
-    header {
-        height: 30vh
-    }
-
-    article {
-        padding: 2rem 6vw;
-    }
-
     #logo {
         left: 6vw;
         top: 12px;
         height: 22px;
     }
 
+    #logo > a {
+        font-size: 22px;
+    }
+
     .material-icons.md-28 {
         right: 6vw;
     }
 
-    .card:nth-of-type(2n-1) {
-        float: left;
+    #menu {
+        right: -300px;
+        width: 300px;
     }
 
-    .card:nth-of-type(2n) {
-        float: right;
+    #menu > div::after {
+        width: 260px;
+    }
+
+    #menu > div > a {
+        font-size: 20px;
+    }
+
+    .active {
+        transform: translateX(-300px) !important;
+    }
+
+    .menu-open {
+        transform: translateX(-300px);
+    }
+
+    header {
+        height: 30vh
+    }
+
+    #header-text > h2 {
+        font-size: 1.5rem;
+    }
+
+    .image-gallery > h3 {
+        padding-top: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .image-gallery > p {
+        padding-bottom: 1.5rem;
+    }
+
+    article {
+        padding: 2rem 6vw;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: max-content;
+        clear: both;
+    }
+
+    .card > .round-img {
+        height: 100%;
+        width: 40%;
+        max-width: 350px;
+        padding-right: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-text > p {
+        font-size: 1.1rem;
+    }
+
+    .card:nth-child(2n+1)  {
+        flex-direction: row-reverse;
+    }
+
+    .card:nth-child(2n+1) > .round-img {
+        padding: 0 0 0 10px;
+    }
+
+    .card:nth-of-type(2n+1) > .card-text {
+        text-align: left;
+        width: 60%;
+    }
+
+    .card:nth-of-type(2n) > .card-text {
+        text-align: right;
+        width: 60%;
+    }
+
+    #kontakt > h2 {
+        font-size: 1.75rem;
+    }
+
+    #kontakt > p, #kontakt > p > a {
+        font-size: 1.3rem;
     }
 }
