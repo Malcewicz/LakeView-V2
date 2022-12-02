@@ -246,7 +246,7 @@ article {
 }
 
 .image-gallery > button:hover {
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25) !important;
+    box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.25) !important;
 }
 
 .image-gallery > button > i {
@@ -356,6 +356,7 @@ button:focus,
 button:active {
     background-color: #3e3c45;
     box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.25), 0 15px 30px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
 }
 
 #kontakt {
@@ -446,13 +447,8 @@ a.fa-brands {
 
 /* Desktop */
 @media screen and (min-width: 1200px) {
-    #header-text > h1 {
-        font-size: 3.6rem;
-        text-shadow: 3px 3px 3px #000000;
-    }
-
     h2 {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 
     h3 {
@@ -477,7 +473,17 @@ a.fa-brands {
     }
 
     header {
-        height: 50vh
+        height: 52vh;
+        background-image: url("./img/background.webp");
+        background-attachment: fixed;
+        background-position: center -4vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #header-text > h1 {
+        font-size: 3.75rem;
+        text-shadow: 3px 3px 3px #000000;
     }
 
     #header-text > h2 {
@@ -486,14 +492,15 @@ a.fa-brands {
     }
 
     article {
-        padding: 4rem 20vw;
+        padding: 4rem 10vw;
+        margin: auto;
+        transition: all 1s ease;
     }
 
     #lokalizacja {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin: auto;
     }
 
     #lokalizacja > .text {
@@ -505,6 +512,21 @@ a.fa-brands {
         margin-left: 1rem;
     }
 
+    @media (min-width: 1800px) {
+        article {
+            padding: 4rem 15vw;
+        }
+    }
+    @media (min-width: 2000px) {
+        article {
+            padding: 4rem 20vw;
+        }
+    }
+    @media (min-width: 2600px) {
+        article {
+            padding: 4rem 25vw;
+        }
+    }
 }
 
 
@@ -585,13 +607,25 @@ a.fa-brands {
         padding: 2rem 6vw;
     }
 
+    #kontakt > h2 {
+        font-size: 1.75rem;
+    }
+
+    #kontakt > p, #kontakt > p > a {
+        font-size: 1.3rem;
+    }
+}
+
+
+/* Okoliczne atrakcje tablet + desktop */
+@media screen and (min-width: 768px) {
     .card {
         display: flex;
         flex-direction: row;
         align-items: center;
         width: 100%;
+        padding: 0 2vw;
         height: max-content;
-        clear: both;
     }
 
     .card > .round-img {
@@ -627,11 +661,9 @@ a.fa-brands {
         width: 60%;
     }
 
-    #kontakt > h2 {
-        font-size: 1.75rem;
-    }
-
-    #kontakt > p, #kontakt > p > a {
-        font-size: 1.3rem;
+    .buttons {
+        width: 100%;
+        margin-top: 2rem;
+        padding: 0 2vw;
     }
 }
