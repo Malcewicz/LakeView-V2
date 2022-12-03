@@ -75,7 +75,8 @@ document
 function scrollToLokalizacja() {
   let lokalizacja = document.getElementById("lokalizacja");
   let lokalizacjaPosition = lokalizacja.getBoundingClientRect().top;
-  let offsetLokalizacja = lokalizacjaPosition + window.scrollY - headerOffset;
+  let offsetLokalizacja =
+    lokalizacjaPosition + window.scrollY - headerOffset - 10;
   window.scrollTo({
     top: offsetLokalizacja,
     behavior: "smooth",
