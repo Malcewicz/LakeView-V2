@@ -152,16 +152,18 @@ nav {
     background: #666;
 }
 
-#menu > div > a {
+#menu > div > p {
     font-family: 'Raleway', sans-serif;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
+    line-height: auto;
     text-decoration: none;
     text-transform: uppercase;
     display: flex;
     align-items: center;
     white-space: nowrap;
+    padding: 0;
     height: 100%;
     width: 100%;
 }
@@ -786,7 +788,7 @@ a.fa-brands {
         width: 260px;
     }
 
-    #menu > div > a {
+    #menu > div > p {
         font-size: 20px;
     }
 
