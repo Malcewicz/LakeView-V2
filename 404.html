@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error 404: Page Not Found</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("./img/background.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        backdrop-filter: blur(5px);
+        font-family: "Inter", "sans-serif";
+        color: #fff;
+        text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+      }
+      main {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      p {
+        margin: 0.75rem 0;
+      }
+      #header {
+        font-size: 64px;
+        font-weight: 700;
+        margin: 0;
+      }
+      #content {
+        text-align: center;
+        font-size: 22px;
+      }
+      #link {
+        font-size: 20px;
+        text-decoration: underline;
+        color: #eeeeee;
+      }
+      #link:visited {
+        color: #96e493;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 id="header">404</h1>
+      <div id="content">
+        <p>
+          O nie! Wystąpił błąd 404, nie mogliśmy znaleźć strony której szukasz.
+        </p>
+      </div>
+      <p>
+        <a href="/" id="link">Wejdź na naszą stronę główną</a>
+      </p>
+    </main>
+  </body>
+</html>
