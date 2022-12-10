@@ -1,10 +1,10 @@
 # LakeView Przewięź v2
 
-Welcome to the official website of LakeView Przewięź apartamenty.
+Welcome to the official website of LakeView Przewięź Apartamenty.
 
 It is a complete rebuild of the first version to reduce the amount of html, css and javascript and improve load times and responsiveness.
 
-It's a static website using vanilla HTML, CSS and JS.
+It's a static, single page website using vanilla HTML, CSS and JS.
 
 Anyway, the website is in polish, so if you were going to check it out and you don't know the language, i guess you could still just look around?
 
