@@ -653,6 +653,10 @@ a.fa-brands {
         margin-top: 1rem;
     }
 
+    #kontakt {
+        padding: max(3rem, 8vh) 8vw;
+    }
+
     #kontakt > h2 {
         font-size: 2.8rem;
         text-shadow: 1px 2px 3px #000000;
@@ -673,7 +677,6 @@ a.fa-brands {
 
     .bg-img {
         width: 100%;
-        height: 40vh;
         background-image: url("./img/background_zaz.webp");
         background-attachment: fixed;
         background-position: center;
