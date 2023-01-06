@@ -21,7 +21,7 @@ body {
 }
 
 .menu-open {
-    transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
     transform: translateX(-250px);
 }
 
@@ -122,12 +122,12 @@ nav {
             rgba(0, 0, 0, 0.95) 50%,
             rgba(0, 0, 0, 0.93) 100%);
     overflow-x: hidden;
-    transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
 }
 
 .active {
     transform: translateX(-250px) !important;
-    transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
 }
 
 #menu > div {
@@ -375,7 +375,7 @@ button:active {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 1.5rem 5vw 1rem 5vw;
+    padding: 2rem 5vw;
 }
 
 #kontakt > h2,
@@ -556,7 +556,7 @@ a.fa-brands {
     article {
         padding: 4rem 10vw;
         margin: auto;
-        transition: all 0.5s ease;
+        transition: transform 0.5s ease;
     }
 
     #lokalizacja {
@@ -654,7 +654,7 @@ a.fa-brands {
     }
 
     #kontakt {
-        padding: max(3rem, 8vh) 8vw;
+        padding: 4rem 8vw;
     }
 
     #kontakt > h2 {
