@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 * {
@@ -20,6 +20,13 @@ body {
   margin: 0;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
 .menu-open {
   transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
   transform: translateX(-250px);
@@ -38,8 +45,12 @@ h6 {
 
 h1,
 h2 {
-  padding: 0.5rem 0 1.5rem 0;
+  margin: 0.5rem 0 1rem 0;
   text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.75rem;
 }
 
 h3 {
@@ -214,11 +225,10 @@ header {
 }
 
 article {
-  padding: 1rem 5vw;
+  margin: 1.5rem 5vw;
 }
 
-.grey {
-  background: #f6f6f6;
+article:nth-of-type(2n) {
   text-align: center;
 }
 
@@ -231,6 +241,7 @@ article {
 .image-gallery > img {
   max-width: 100%;
   border-radius: 5px 5px 0 0;
+  box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 0.25);
 }
 
 .image-gallery > h3 {
@@ -330,22 +341,6 @@ table tfoot td {
   max-width: 400px;
 }
 
-a.button {
-  width: 100%;
-  color: #333;
-}
-
-a.button > button {
-  background: rgba(50, 50, 55, 0.95);
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
-}
-
-a.button > button:hover {
-  background-color: rgb(68, 65, 75);
-  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3),
-    0 15px 30px 0 rgba(0, 0, 0, 0.25);
-}
-
 button {
   display: inline-block;
   background-color: #333;
@@ -356,23 +351,31 @@ button {
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Raleway", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   cursor: pointer;
-  transition-duration: 0.5s;
   padding: 1rem 2rem;
   margin: 0.25rem 0;
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
 }
 
-button:hover,
-button:focus,
-button:active {
-  background-color: #3e3c45;
-  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.25),
-    0 15px 30px 0 rgba(0, 0, 0, 0.2);
-  transition: all 0.5s ease;
+a.button {
+  width: 300px;
+}
+
+a.button > button {
+  background: rgba(50, 50, 55, 0.95);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.5s ease;
+}
+
+a.button > button:hover,
+a.button > button:focus,
+a.button > button:active {
+  background-color: rgb(62, 60, 68, 0.95);
+  box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.5s ease;
 }
 
 #kontakt {
@@ -394,7 +397,6 @@ button:active {
 
 #kontakt > h2 {
   color: #f6f6f6;
-  font-size: 1.5rem;
   text-shadow: 1px 1px 3px #000000;
 }
 
@@ -409,11 +411,14 @@ button:active {
 
 .bg-img {
   width: 100%;
+  max-width: 100%;
   height: max-content;
   background-image: url("./img/background_zaz.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  margin: 0;
+  padding: 1rem 5vw;
 }
 
 footer {
@@ -447,11 +452,19 @@ a.fa-brands {
   justify-content: center;
   height: 50px;
   color: #666;
+  transition: color 200ms ease;
+}
+
+a.fa-brands:hover {
+  color: #333;
+  transition: color 200ms ease;
 }
 
 .copyright {
   margin: 1em 0;
   padding: 0;
+  font-size: 1.1rem;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -476,14 +489,24 @@ a.fa-brands {
   }
 
   nav {
-    position: absolute;
-    height: 80px;
-    background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.2) 15%,
-      rgba(0, 0, 0, 0.6) 100%
-    );
+    position: fixed;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0 0 25px -1px rgba(0, 0, 0, 0.25);
+  }
+
+  #navbar {
+    width: 100%;
+    max-width: 1500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10vw;
   }
 
   #logo,
@@ -494,20 +517,16 @@ a.fa-brands {
 
   #logo-pc {
     display: block;
-    position: absolute;
-    left: 10vw;
-    top: 30px;
   }
 
   #logo-pc > a {
     font-family: "Raleway";
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 1.5rem;
-    text-shadow: 1px 2px 3px #000000;
+    /* text-transform: uppercase; */
+    color: #333;
+    font-size: 1.4rem;
   }
 
   #menu-pc {
@@ -515,9 +534,6 @@ a.fa-brands {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    position: absolute;
-    right: 8vw;
-    top: 32px;
   }
 
   #menu-pc > div {
@@ -533,17 +549,21 @@ a.fa-brands {
     display: flex;
     align-items: center;
     font-family: "Raleway", sans-serif;
-    color: #fff;
-    font-size: 1.4rem;
+    color: #333;
+    font-size: 1.3rem;
     font-weight: 500;
     text-decoration: none;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     white-space: nowrap;
-    text-shadow: 1px 2px 3px #000000;
+  }
+
+  main {
+    gap: 6vh;
   }
 
   header {
     height: 52vh;
+    margin-top: 64px;
     background-image: url("./img/background.webp");
     background-attachment: fixed;
     background-position: center -4vh;
@@ -553,6 +573,7 @@ a.fa-brands {
 
   #header-text > h1 {
     font-size: 3.75rem;
+    margin-top: 0;
     text-shadow: 3px 3px 3px #000000;
   }
 
@@ -562,8 +583,9 @@ a.fa-brands {
   }
 
   article {
-    padding: 5rem 10vw;
-    margin: auto;
+    max-width: 1500px;
+    margin-inline: 10vw;
+    padding-block: 2.5rem;
     transition: transform 0.5s ease;
   }
 
@@ -571,6 +593,7 @@ a.fa-brands {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-top: 6vh;
   }
 
   #lokalizacja > .text {
@@ -579,7 +602,7 @@ a.fa-brands {
 
   #lokalizacja > iframe {
     width: 50%;
-    margin-left: 1rem;
+    margin-left: 2rem;
   }
 
   #apartamenty {
@@ -658,12 +681,16 @@ a.fa-brands {
     padding-left: 2rem;
   }
 
+  #atrakcje {
+    margin-bottom: -6vh;
+  }
+
   .card:first-of-type {
     margin-top: 1rem;
   }
 
   #kontakt {
-    padding: 5rem 8vw;
+    padding-block: 5rem;
   }
 
   #kontakt > h2 {
@@ -681,7 +708,7 @@ a.fa-brands {
 
   #kontakt > a > button {
     margin-top: 1rem;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   .bg-img {
@@ -722,26 +749,9 @@ a.fa-brands {
     content: "|";
     padding-left: 1rem;
   }
-
-  @media (max-width: 1400px) {
-    #logo-pc {
-      left: 5vw;
-    }
-    #menu-pc {
-      right: 5vw;
-    }
-  }
   @media (min-width: 1800px) {
     .card-text > p {
       font-size: 1.15rem !important;
-    }
-    article {
-      padding: 5rem 15vw;
-    }
-  }
-  @media (min-width: 2000px) {
-    article {
-      padding: 5rem 20vw;
     }
   }
 }
@@ -820,7 +830,7 @@ a.fa-brands {
   }
 
   article {
-    padding: 2rem 6vw;
+    margin: 2rem 6vw;
   }
 
   #kontakt > h2 {
@@ -878,6 +888,11 @@ a.fa-brands {
   }
 
   .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 2rem;
     width: 100%;
     margin-top: 2rem;
     padding: 0 2vw;
