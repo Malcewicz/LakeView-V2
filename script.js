@@ -28,14 +28,15 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("orientationChange", lazyload);
 });
 
+// Create variables for each element class
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
 const nav = document.querySelector("nav");
 const header = document.querySelector("header");
 const main = document.querySelector("main");
 const footer = document.querySelector("footer");
-const headerOffset = 40;
 
+// Define toggleMenu function
 function toggleMenu() {
   menu.classList.toggle("active");
   nav.classList.toggle("menu-open");
@@ -49,88 +50,62 @@ function toggleMenu() {
   }
 }
 
-header.addEventListener(
-  "click",
-  () => {
-    if (menu.classList.contains("active")) {
-      toggleMenu();
-    }
-  },
-  true
-);
+// Add event listener to header and main to close menu when clicked outside
+[header, main].forEach((item) => {
+  item.addEventListener(
+    "click",
+    () => {
+      if (menu.classList.contains("active")) {
+        toggleMenu();
+      }
+    },
+    true
+  );
+});
 
-main.addEventListener(
-  "click",
-  () => {
-    if (menu.classList.contains("active")) {
-      toggleMenu();
-    }
-  },
-  true
-);
+// Create dictionary of all menu links on mobile
+const menuLinks = {
+  lokalizacja: document.getElementById("menu-lokalizacja"),
+  apartamenty: document.getElementById("menu-apartamenty"),
+  oferta: document.getElementById("menu-oferta"),
+  atrakcje: document.getElementById("menu-atrakcje"),
+  kontakt: document.getElementById("menu-kontakt"),
+};
 
-document
-  .getElementById("menu-lokalizacja")
-  .addEventListener("click", scrollToLokalizacja);
-function scrollToLokalizacja() {
-  let lokalizacja = document.getElementById("lokalizacja");
-  let lokalizacjaPosition = lokalizacja.getBoundingClientRect().top;
-  let offsetLokalizacja =
-    lokalizacjaPosition + window.scrollY - headerOffset - 10;
-  window.scrollTo({
-    top: offsetLokalizacja,
-    behavior: "smooth",
+// Create dictionary of all menu links on desktop
+const menuLinksPc = {
+  apartamenty: document.getElementById("menu-apartamenty-pc"),
+  oferta: document.getElementById("menu-oferta-pc"),
+  atrakcje: document.getElementById("menu-atrakcje-pc"),
+  kontakt: document.getElementById("menu-kontakt-pc"),
+};
+
+// Get header height
+const headerOffset = 40;
+
+// Add event listener to each menu link on mobile
+Object.entries(menuLinks).forEach(([key, value]) => {
+  value.addEventListener("click", () => {
+    toggleMenu();
+    let element = document.getElementById(key);
+    let elementPosition = element.getBoundingClientRect().top;
+    let elementOffset = elementPosition + window.scrollY - headerOffset - 10;
+    window.scrollTo({
+      top: elementOffset,
+      behavior: "smooth",
+    });
   });
-}
+});
 
-document
-  .getElementById("menu-apartamenty")
-  .addEventListener("click", scrollToApartamenty);
-function scrollToApartamenty() {
-  let apartamenty = document.getElementById("apartamenty");
-  let apartamentyPosition = apartamenty.getBoundingClientRect().top;
-  let offsetApart = apartamentyPosition + window.scrollY - headerOffset;
-  window.scrollTo({
-    top: offsetApart,
-    behavior: "smooth",
+// Add event listener to each menu link on PC
+Object.entries(menuLinksPc).forEach(([key, value]) => {
+  value.addEventListener("click", () => {
+    let elementPc = document.getElementById(key);
+    let elementPositionPc = elementPc.getBoundingClientRect().top;
+    let elementOffsetPc = elementPositionPc + window.scrollY - headerOffset;
+    window.scrollTo({
+      top: elementOffsetPc,
+      behavior: "smooth",
+    });
   });
-}
-
-document
-  .getElementById("menu-oferta")
-  .addEventListener("click", scrollToOferta);
-function scrollToOferta() {
-  let oferta = document.getElementById("oferta");
-  let ofertaPosition = oferta.getBoundingClientRect().top;
-  let offsetOferta = ofertaPosition + window.scrollY - headerOffset;
-  window.scrollTo({
-    top: offsetOferta,
-    behavior: "smooth",
-  });
-}
-
-document
-  .getElementById("menu-atrakcje")
-  .addEventListener("click", scrollToAtrakcje);
-function scrollToAtrakcje() {
-  let atrakcje = document.getElementById("atrakcje");
-  let atrakcjePosition = atrakcje.getBoundingClientRect().top;
-  let offsetAtrakcje = atrakcjePosition + window.scrollY - headerOffset;
-  window.scrollTo({
-    top: offsetAtrakcje,
-    behavior: "smooth",
-  });
-}
-
-document
-  .getElementById("menu-kontakt")
-  .addEventListener("click", scrollToKontakt);
-function scrollToKontakt() {
-  let kontakt = document.getElementById("kontakt");
-  let kontaktPosition = kontakt.getBoundingClientRect().top;
-  let offsetKontakt = kontaktPosition + window.scrollY - headerOffset;
-  window.scrollTo({
-    top: offsetKontakt,
-    behavior: "smooth",
-  });
-}
+});
