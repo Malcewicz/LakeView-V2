@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Cache-control" content="public" />
-    <meta http-equiv="Cache-control" content="max-age=31536000" />
+    <meta http-equiv="Cache-Control" content="public" />
+    <meta http-equiv="Cache-Control" content="max-age=604800" />
     <meta http-equiv="Content-encoding" content="br" />
     <title>LakeView Przewięź</title>
     <meta name="author" content="Maciej Bernatowicz" />
@@ -49,29 +49,63 @@
       media="(prefers-color-scheme: dark)"
     />
 
-    <link rel="stylesheet preload" as="style" href="style.css" />
+    <link
+      rel="preload"
+      as="style"
+      href="style.css?v=1.0"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-      rel="stylesheet preload"
+      rel="preload"
       as="style"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
 
     <link
       rel="preload"
       as="image"
       href="./img/background.webp"
-      type="image/png"
+      type="image/webp"
     />
 
     <noscript>
-      <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="style.css?v=1.0" />
       <link
-        rel="stylesheet preload"
-        as="style"
-        href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap"
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
       />
-      <link rel="preload" as="image" href="./img/background.webp" />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="./img/background.webp"
+        type="image/webp"
+      />
     </noscript>
   </head>
 
@@ -89,9 +123,6 @@
     <nav>
       <div id="navbar">
         <span id="logo">
-          <a href="/">LakeView Przewięź</a>
-        </span>
-        <span id="logo-pc">
           <a href="/"
             >LakeView <a href="/" style="font-weight: 500">Apartamenty</a></a
           >
@@ -99,7 +130,7 @@
         <span
           aria-controls="menu"
           onclick="toggleMenu()"
-          class="material-icons md-28"
+          class="material-icons-round md-28"
           id="menu-toggle"
           >menu</span
         >
@@ -122,19 +153,19 @@
 
     <div id="menu">
       <div>
-        <p onclick="toggleMenu()" id="menu-lokalizacja">Lokalizacja</p>
+        <p id="menu-lokalizacja">Lokalizacja</p>
       </div>
       <div>
-        <p onclick="toggleMenu()" id="menu-apartamenty">Apartamenty i domek</p>
+        <p id="menu-apartamenty">Apartamenty i domek</p>
       </div>
       <div>
-        <p onclick="toggleMenu()" id="menu-oferta">Oferta</p>
+        <p id="menu-oferta">Oferta</p>
       </div>
       <div>
-        <p onclick="toggleMenu()" id="menu-atrakcje">Okoliczne atrakcje</p>
+        <p id="menu-atrakcje">Okoliczne atrakcje</p>
       </div>
       <div>
-        <p onclick="toggleMenu()" id="menu-kontakt">Kontakt</p>
+        <p id="menu-kontakt">Kontakt</p>
       </div>
     </div>
 
@@ -165,7 +196,7 @@
         </div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1878.9636189891849!2d23.107021026604947!3d53.87017090659561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e059fb33ea96f5%3A0x9b7dabbe23aa282d!2zTGFrZVZpZXcgUHJ6ZXdpxJnFug!5e1!3m2!1spl!2spl!4v1643311041080!5m2!1spl!2spl"
-          title="mapa"
+          title="Mapa"
           style="border: none; border-radius: 5px"
           allow="fullscreen"
           aria-hidden="false"
@@ -173,7 +204,8 @@
           tabindex="0"
           width="100%"
           height="450"
-          alt="lakeview google maps"
+          alt="Lakeview na mapie Google Maps"
+          loading="lazy"
         ></iframe>
       </article>
 
@@ -187,56 +219,78 @@
             src="img/kuchnia1.webp"
             alt="Funkcjonalny aneks kuchenny z lodówką, kuchenką i dostępem do wszystkich niezbędnych sprzętów"
             loading="lazy"
+            width="800"
+            height="600"
           />
           <img
             class="mySlides"
             data-src="img/kuchnia2.webp"
             alt="Nowoczesna, w pełni wyposażona kuchnia w apartamencie z drewnianymi frontami, kamiennym blatem i krzesłami barowymi"
+            width="800"
+            height="600"
           />
           <img
             class="mySlides"
             data-src="img/salon1.webp"
             alt="Jasny salon z wygodną kanapą, telewizorem i wygodnym miejscem do wypoczynku po dniu nad jeziorem"
+            width="800"
+            height="600"
           />
           <img
             class="mySlides"
             data-src="img/salon2.webp"
             alt="Przytulny salon z wygodną kanapą, stolikiem kawowym i widokiem na jezioro Studzieniczne"
+            width="800"
+            height="600"
           />
           <img
             class="mySlides"
             data-src="img/salon3.webp"
             alt="Salon z jasnym oświetleniem, telewizorem, wyjściem na balkon i schodami prowadzącymi na poddasze"
+            width="800"
+            height="600"
           />
           <img
             class="mySlides"
             data-src="img/sypialnia1.webp"
             alt="Przytulna sypialnia z funkcjonalną szafą i oknem z widokiem na las"
+            width="800"
+            height="600"
           />
           <img
             class="mySlides"
             data-src="img/sypialnia2.webp"
             alt="Komfortowa sypialnia z podwójnym łóżkiem i dużym oknem"
+            width="800"
+            height="600"
           />
           <img
             class="mySlides"
             data-src="img/sypialnia3.webp"
             alt="Przytulna sypialnia z dużym łóżkiem i szafą"
+            width="800"
+            height="600"
           />
           <img
             class="mySlides"
             data-src="img/sypialnia4.webp"
             alt="Jasna sypialnia z podwójnym łóżkiem i dużą szafą"
+            width="800"
+            height="600"
           />
           <img
             class="mySlides"
             data-src="img/łazienka1.webp"
             alt="Nowoczesna łazienka z kabiną prysznicową, umywalką i toaletą"
+            width="800"
+            height="600"
           />
           <img
             class="mySlides"
             data-src="img/apart_zewnatrz.webp"
             alt="Widok na budynek apartamentów LakeView z zewnątrz, położony nad brzegiem jeziora Studzienicznego"
+            width="800"
+            height="600"
           />
           <div class="gallery-header">
             <button
@@ -245,7 +299,7 @@
               data-gallery-action="prev"
               aria-label="Poprzednie zdjęcie"
             >
-              <i class="fa-solid fa-angle-left"></i>
+              <span class="material-icons-round">arrow_back_ios_new</span>
             </button>
             <h3>Apartamenty</h3>
             <button
@@ -254,7 +308,7 @@
               data-gallery-action="next"
               aria-label="Następne zdjęcie"
             >
-              <i class="fa-solid fa-angle-right"></i>
+              <span class="material-icons-round">arrow_forward_ios</span>
             </button>
           </div>
           <p>
@@ -271,36 +325,50 @@
             src="img/domek_zewnatrz_2.webp"
             alt="Panoramiczny widok na drewniany domek z dużym, zadaszonym tarasem i odgrodzonym podwórkiem"
             loading="lazy"
+            width="800"
+            height="600"
           />
           <img
             class="mySlides2"
             data-src="img/salon_domek1.webp"
             alt="Nowoczesny, jasny salon z kominkiem i wygodną skórzaną kanapą"
+            width="800"
+            height="600"
           />
           <img
             class="mySlides2"
             data-src="img/salon_domek2.webp"
             alt="Salon z kanapą narożną i wyjściem na taras"
+            width="800"
+            height="600"
           />
           <img
             class="mySlides2"
             data-src="img/kuchnia_domek1.webp"
             alt="Zdjęcie kuchni w domku"
+            width="800"
+            height="600"
           />
           <img
             class="mySlides2"
             data-src="img/sypialnia_domek1.webp"
             alt="Przytulna sypialnia z podwójnym łóżkiem, dużą szafą i oknem z widokiem na las"
+            width="752"
+            height="564"
           />
           <img
             class="mySlides2"
             data-src="img/sypialnia_domek2.webp"
             alt="Ciepła sypialnia z dużym łóżkiem i szafą"
+            width="752"
+            height="564"
           />
           <img
             class="mySlides2"
             data-src="img/domek_zewnatrz.webp"
             alt="Widok na domek z zewnątrz, z piękną drewnianą elewacją i tarasem"
+            width="800"
+            height="600"
           />
           <div class="gallery-header">
             <button
@@ -309,7 +377,7 @@
               data-gallery-action="prev"
               aria-label="Poprzednie zdjęcie"
             >
-              <i class="fa-solid fa-angle-left"></i>
+              <span class="material-icons-round"> arrow_back_ios_new </span>
             </button>
             <h3>Domek</h3>
             <button
@@ -318,7 +386,7 @@
               data-gallery-action="next"
               aria-label="Następne zdjęcie"
             >
-              <i class="fa-solid fa-angle-right"></i>
+              <span class="material-icons-round"> arrow_forward_ios </span>
             </button>
           </div>
           <p>
@@ -335,36 +403,50 @@
             src="img/plac_zabaw.webp"
             alt="Funkcjonalny plac zabaw dla dzieci z huśtawkami, zjeżdżalnią, piaskownicą i trampoliną"
             loading="lazy"
+            width="800"
+            height="600"
           />
           <img
             class="mySlides3"
             data-src="img/brzeg.webp"
             alt="Kamienna ścieżka pośród zielonej trawy prowadząca do dużego pomostu"
+            width="800"
+            height="600"
           />
           <img
             class="mySlides3"
             data-src="img/brzeg2.webp"
             alt="Miejsce na ognisko nad jeziorem, z drewnianą ławką i stołem pod zadaszeniem"
+            width="800"
+            height="600"
           />
           <img
             class="mySlides3"
             data-src="img/bania.webp"
             alt="Duża drewniana bania pod zadaszeniem, ze stolikiem i bezpośrednim dostępem do jeziora"
+            width="800"
+            height="600"
           />
           <img
             class="mySlides3"
             data-src="img/sauna_srodek.webp"
             alt="Wnętrze sauny z drewnianymi ławkami i widokiem na jezioro"
+            width="800"
+            height="600"
           />
           <img
             class="mySlides3"
             data-src="img/motorowka.webp"
             alt="Piękna nowa motorówka z daszkiem"
+            width="800"
+            height="600"
           />
           <img
             class="mySlides3"
             data-src="img/brzeg_dron.webp"
             alt="Widok na brzeg jeziora, część działki i apartamenty Lakeview z lotu ptaka"
+            width="800"
+            height="600"
           />
           <div class="gallery-header">
             <button
@@ -373,7 +455,7 @@
               data-gallery-action="prev"
               aria-label="Poprzednie zdjęcie"
             >
-              <i class="fa-solid fa-angle-left"></i>
+              <span class="material-icons-round"> arrow_back_ios_new </span>
             </button>
             <h3 class="smaller">Nasze atrakcje</h3>
             <button
@@ -382,7 +464,7 @@
               data-gallery-action="next"
               aria-label="Następne zdjęcie"
             >
-              <i class="fa-solid fa-angle-right"></i>
+              <span class="material-icons-round"> arrow_forward_ios </span>
             </button>
           </div>
           <p>
@@ -455,7 +537,8 @@
               src="img/atrakcje1.webp"
               alt="Kajak na Rospudzie"
               loading="lazy"
-              width="90%"
+              width="400"
+              height="400"
             />
           </div>
           <div class="card-text">
@@ -477,7 +560,8 @@
               src="img/atrakcje2.webp"
               alt="Kanał Augustowski"
               loading="lazy"
-              width="90%"
+              width="400"
+              height="400"
             />
           </div>
           <div class="card-text">
@@ -500,7 +584,8 @@
               src="img/atrakcje3.webp"
               alt="Kaplica w Studzienicznej"
               loading="lazy"
-              width="90%"
+              width="400"
+              height="400"
             />
           </div>
           <div class="card-text">
@@ -523,7 +608,8 @@
               src="img/atrakcje4.webp"
               alt="Park linowy"
               loading="lazy"
-              width="90%"
+              width="400"
+              height="400"
             />
           </div>
           <div class="card-text">
@@ -584,18 +670,27 @@
             <a
               href="https://www.facebook.com/LakeView-Apartamenty-w-Przewi%C4%99zi-174137271041637/"
               target="_blank"
-              class="fa-brands fa-facebook-f"
               aria-label="Facebook"
             >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+                />
+              </svg>
             </a>
           </li>
           <li>
             <a
               href="https://www.instagram.com/lakeview.apartamenty/"
               target="_blank"
-              class="fa-brands fa-instagram"
               aria-label="Instagram"
-            ></a>
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+            </a>
           </li>
         </ul>
         <div class="copyright">
@@ -609,11 +704,7 @@
         </div>
       </div>
     </footer>
-    <script src="script.js"></script>
-    <script src="gallery.js"></script>
-    <script
-      src="https://kit.fontawesome.com/02bee5bd99.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="script.js?v=1.0" defer></script>
+    <script src="gallery.js?v=1.0" defer></script>
   </body>
 </html>

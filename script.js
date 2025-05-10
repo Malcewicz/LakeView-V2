@@ -85,3 +85,21 @@ Object.entries(menuLinksPc).forEach(([key, value]) => {
     });
   });
 });
+
+// Lazy load contact section's background image
+const kontaktSection = document.getElementById("kontakt");
+if (kontakt) {
+  const kontaktObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          kontaktSection.classList.add("bg-loaded");
+          observer.unobserve(kontaktSection); // Stop observing once loaded
+        }
+      });
+    },
+    { rootMargin: "0px 0px 200px 0px" }
+  ); // Load when 200px from bottom of viewport
+
+  kontaktObserver.observe(kontaktSection);
+}
