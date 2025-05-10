@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 * {
@@ -39,14 +39,15 @@ h4,
 h5,
 h6 {
   font-family: "Raleway", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0;
 }
 
 h1,
 h2 {
-  margin: 0.5rem 0 1rem 0;
-  text-transform: uppercase;
+  font-weight: 800;
+  margin: 0.5rem 0 1.5rem 0;
+  /* text-transform: uppercase; */
 }
 
 h2 {
@@ -236,45 +237,55 @@ article:nth-of-type(2n) {
   display: inline-block;
   width: 100%;
   max-width: 650px;
+  text-align: center;
 }
 
 .image-gallery > img {
+  display: block;
+  width: 100%;
   max-width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background-color: #f6f6f6;
+  text-align: center;
   border-radius: 5px 5px 0 0;
   box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 0.25);
 }
 
-.image-gallery > h3 {
+.image-gallery > .gallery-header {
+  display: flex;
   width: 100%;
   height: 45px;
-  padding-top: 0.7rem;
-  margin-bottom: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
   background: #fff;
   border-radius: 0 0 5px 5px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  padding: 0 10px;
+  margin-bottom: 0.5rem;
 }
 
-.image-gallery > button {
+.gallery-header > h3 {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+}
+
+.gallery-header > .gallery-nav-button {
   width: 40px;
   height: 35px;
   padding: 5px 10px;
-  margin: 5px 5px;
   background: #333;
+  text-transform: none;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.image-gallery > button:first-of-type {
-  float: left;
+.gallery-header > .gallery-nav-button:hover {
+  background-color: #3f3f3f;
+  box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.2) !important;
 }
 
-.image-gallery > button:last-of-type {
-  float: right;
-}
-
-.image-gallery > button:hover {
-  box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.25) !important;
-}
-
-.image-gallery > button > i {
+.gallery-header > .gallery-nav-button > i {
   color: #fff;
   width: 100%;
   font-size: 18px;
@@ -391,7 +402,7 @@ a.button > button:active {
 #kontakt > p,
 #kontakt > p > a {
   font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-decoration: none;
 }
 
@@ -422,10 +433,9 @@ a.button > button:active {
 }
 
 footer {
-  padding: 2.5rem 5vw 1.5rem 5vw;
+  padding: 2rem 5vw 1.5rem 5vw;
   color: #aaa;
   text-align: center;
-  font-weight: 500;
 }
 
 footer .icons {
@@ -461,15 +471,15 @@ a.fa-brands:hover {
 }
 
 .copyright {
-  margin: 1em 0;
+  margin-top: 2rem;
   padding: 0;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   text-align: center;
 }
 
 .copyright > p {
-  padding: 0 0 0.5rem 0;
+  padding: 0 0 0.25rem 0;
 }
 
 /* Desktop */
@@ -593,6 +603,7 @@ a.fa-brands:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 2vw;
     padding-top: 6vh;
   }
 
@@ -602,7 +613,6 @@ a.fa-brands:hover {
 
   #lokalizacja > iframe {
     width: 50%;
-    margin-left: 2rem;
   }
 
   #apartamenty {
@@ -624,29 +634,29 @@ a.fa-brands:hover {
 
   .image-gallery:nth-of-type(1) {
     grid-column: 1 / 5;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
   }
 
   .image-gallery:nth-of-type(2) {
     grid-column: 5 / 9;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
   }
 
   .image-gallery:nth-of-type(3) {
     grid-column: 3 / 7;
   }
 
-  .image-gallery > h3 {
+  .image-gallery > .gallery-header {
     height: 50px;
     margin-bottom: 0.7rem;
   }
 
-  .image-gallery > button {
-    width: 40px;
-    height: 35px;
-    padding: 5px 10px;
-    margin: 7px 10px;
-    background: #333;
+  .gallery-header > h3 {
+    font-size: 1.4rem;
+  }
+
+  .image-gallery > p {
+    padding-inline: 1rem;
   }
 
   #oferta {
@@ -741,6 +751,12 @@ a.fa-brands:hover {
     margin: 2rem 0 1rem 0;
   }
 
+  .copyright > p {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0;
+  }
+
   .copyright > p:first-child {
     padding-right: 1rem;
   }
@@ -749,6 +765,7 @@ a.fa-brands:hover {
     content: "|";
     padding-left: 1rem;
   }
+
   @media (min-width: 1800px) {
     .card-text > p {
       font-size: 1.15rem !important;

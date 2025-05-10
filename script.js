@@ -1,33 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  var lazyloadImages = document.querySelectorAll("img.lazy");
-  var lazyloadThrottleTimeout;
-
-  function lazyload() {
-    if (lazyloadThrottleTimeout) {
-      clearTimeout(lazyloadThrottleTimeout);
-    }
-
-    lazyloadThrottleTimeout = setTimeout(function () {
-      var scrollTop = window.pageYOffset;
-      lazyloadImages.forEach(function (img) {
-        if (img.offsetTop < window.innerHeight + scrollTop) {
-          img.src = img.dataset.src;
-          img.classList.remove("lazy");
-        }
-      });
-      if (lazyloadImages.length == 0) {
-        document.removeEventListener("scroll", lazyload);
-        window.removeEventListener("resize", lazyload);
-        window.removeEventListener("orientationChange", lazyload);
-      }
-    }, 20);
-  }
-
-  document.addEventListener("scroll", lazyload);
-  window.addEventListener("resize", lazyload);
-  window.addEventListener("orientationChange", lazyload);
-});
-
 // Create variables for each element class
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
@@ -43,6 +13,7 @@ function toggleMenu() {
   header.classList.toggle("menu-open");
   main.classList.toggle("menu-open");
   footer.classList.toggle("menu-open");
+  // Change the menu toggle icon depending on the menu state
   if (menuToggle.innerHTML === "menu") {
     menuToggle.innerHTML = "close";
   } else {
@@ -86,10 +57,13 @@ const headerOffset = 40;
 // Add event listener to each menu link on mobile
 Object.entries(menuLinks).forEach(([key, value]) => {
   value.addEventListener("click", () => {
+    // Close the menu when a link is clicked
     toggleMenu();
+    // Get the target element and its position
     let element = document.getElementById(key);
     let elementPosition = element.getBoundingClientRect().top;
     let elementOffset = elementPosition + window.scrollY - headerOffset - 10;
+    // Smoothly scroll to the target element
     window.scrollTo({
       top: elementOffset,
       behavior: "smooth",
@@ -100,9 +74,11 @@ Object.entries(menuLinks).forEach(([key, value]) => {
 // Add event listener to each menu link on PC
 Object.entries(menuLinksPc).forEach(([key, value]) => {
   value.addEventListener("click", () => {
+    // Get the target element and its position
     let elementPc = document.getElementById(key);
     let elementPositionPc = elementPc.getBoundingClientRect().top;
     let elementOffsetPc = elementPositionPc + window.scrollY - headerOffset;
+    // Smoothly scroll to the target element
     window.scrollTo({
       top: elementOffsetPc,
       behavior: "smooth",
